@@ -1,0 +1,17 @@
+/*
+Theme Name: Shearwater Victoria Falls
+Theme URI: https://www.shearwatervictoriafalls.com/
+Author: Shearwater Victoria Falls
+Author URI: https://www.shearwatervictoriafalls.com/
+Description: A custom editorial theme for Shearwater Victoria Falls — adventure, lodge, and dining on the edge of Mosi-oa-Tunya. Designed for WordPress 6.4+.
+Version: 1.0.0
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 8.1
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: shearwater-vf
+Tags: custom-menu, featured-images, translation-ready, one-column, custom-logo, editor-style, theme-options
+*/
+
+/* Styles live in assets/css/main.css and are enqueued by functions.php. */
