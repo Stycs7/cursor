@@ -2,10 +2,12 @@
 """Build static HTML previews that match the WordPress theme."""
 
 from pathlib import Path
+import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "preview"
-ASSETS = "../wp-content/themes/shearwater-vf/assets"
+THEME_ASSETS = ROOT / "wp-content/themes/shearwater-vf/assets"
+ASSETS = "assets"
 IMG = {
     "falls": "https://images.unsplash.com/photo-1614027164847-a0b4cba92997?auto=format&fit=crop&w=2000&q=80",
     "raft": "https://images.unsplash.com/photo-1530866495561-5072a89b13d4?auto=format&fit=crop&w=1600&q=80",
@@ -355,6 +357,10 @@ CONTACT = """
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
+    dest_assets = OUT / "assets"
+    if dest_assets.exists():
+        shutil.rmtree(dest_assets)
+    shutil.copytree(THEME_ASSETS, dest_assets)
     pages = {
         "index.html": ("Home", "index.html", HOME),
         "experiences.html": ("Experiences", "experiences.html", EXPS),
