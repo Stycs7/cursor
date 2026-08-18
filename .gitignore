@@ -1,0 +1,22 @@
+.DS_Store
+Thumbs.db
+*.log
+*.sql
+*.sqlite
+node_modules/
+vendor/
+.idea/
+.vscode/
+*.swp
+
+# WordPress runtime (local Docker)
+wp-content/uploads/
+wp-content/upgrade/
+wp-content/cache/
+wp-content/ai1wm-backups/
+wp-content/plugins/
+wp-content/mu-plugins/
+wordpress/
+mysql-data/
+.env
+.env.local
